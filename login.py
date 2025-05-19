@@ -95,7 +95,7 @@ class Login:
             messagebox.showinfo("Sussessfully","Welcome to Attendance Managment System Using Facial Recognition")
         else:
             # messagebox.showerror("Error","Please Check Username or Password !")
-            conn = mysql.connector.connect(user='root', password='Mark42#1',host='localhost',database='face_recognition',port=3306)
+            conn = mysql.connector.connect(user='root', password='1234',host='localhost',database='face_recognition',port=3306)
             mycursor = conn.cursor()
             mycursor.execute("select * from regteach where email=%s and pwd=%s",(
                 self.txtuser.get(),
@@ -123,7 +123,7 @@ class Login:
         elif(self.var_pwd.get()==""):
             messagebox.showerror("Error","Please Enter the New Password!",parent=self.root2)
         else:
-            conn = mysql.connector.connect(user='root', password='Mark42#1',host='localhost',database='face_recognition',port=3306)
+            conn = mysql.connector.connect(user='root', password='1234',host='localhost',database='face_recognition',port=3306)
             mycursor = conn.cursor()
             query=("select * from regteach where email=%s and ss_que=%s and s_ans=%s")
             value=(self.txtuser.get(),self.var_ssq.get(),self.var_sa.get())
@@ -148,7 +148,7 @@ class Login:
         if self.txtuser.get()=="":
             messagebox.showerror("Error","Please Enter the Email ID to reset Password!")
         else:
-            conn = mysql.connector.connect(user='root', password='Mark42#1',host='localhost',database='face_recognition',port=3306)
+            conn = mysql.connector.connect(user='root', password='1234',host='localhost',database='face_recognition',port=3306)
             mycursor = conn.cursor()
             query=("select * from regteach where email=%s")
             value=(self.txtuser.get(),)
